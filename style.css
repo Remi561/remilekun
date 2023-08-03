@@ -7,7 +7,7 @@
 
 }
 body{
-    background: url(../profile.jpg);
+    background: url(profile.jpg);
     width: 100%;
     height: 100vh;
     background-position: center;
@@ -155,7 +155,7 @@ body{
 }
 @media screen and (max-width: 690px){
     body{
-        background-image: url(../secondProfile.jpg);
+        background-image: url(secondProfile.jpg);
     }
     .content p:nth-child(3){
         font-size: 11px;
@@ -169,6 +169,6 @@ body{
 }
 @media screen and (max-width: 410px){
     body{
-        background-image: url(../thirdProfile.jpg);
+        background-image: url(thirdProfile.jpg);
     }
 }
