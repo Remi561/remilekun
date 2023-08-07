@@ -2,20 +2,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
     font-family: 'Poppins', sans-serif;
 
 }
-body{
-    background: url(profile.jpg);
+html{
+    scroll-behavior: smooth;
+    transition: .5s;
+}
+#header{
+    background: url(profile.JPG);
+    background-attachment: fixed;
     width: 100%;
     height: 100vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
 }
-/* navbar */
+/* ----------------------navbar------------------ */
 .navbar{
     display: flex;
     align-items: center;
@@ -26,7 +29,7 @@ body{
     font-size: 20px;
    
 }
-.left-navbar::before{
+.left-navbar span::before{
     width: 30px;
     height: 30px;
     position: absolute;
@@ -35,7 +38,7 @@ body{
     border-radius: 50%;
     top: 12px;
     opacity: .8;
-    z-index: -2;
+   
     
 }
 .center-navbar{
@@ -52,11 +55,27 @@ body{
     text-decoration: none;
     color: black;
     transition: .3s;
+    position: relative;
 }
-.center-navbar ul li a:hover,
+.center-navbar ul li a::after{
+    width: 0;
+    height: 3px;
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    bottom: -6px;
+    left: 0;
+    transition: .5s;
+}
+.center-navbar ul li a:hover::after{
+    width: 100%;
+
+}
+
 .right-navbar ion-icon:hover{
-    color: rgb(240, 186, 114);
+   color: #fff;
 }
+
 .right-navbar{
     font-size: 19px;
 }
@@ -66,43 +85,269 @@ body{
 .icons{
     display: none;
 }
-/* content */
-.content{
-    margin-top: 200px;
-    margin-left: 15%;
-    height: 50;
-}
-.content p:nth-child(1){
-    font-size: 20px;
-}
-.content h3{
+/* ---------------------content---------------------- */
+.header-text{
+    margin-top: 20%;
     font-size: 30px;
     font-weight: 300;
+   margin-left: 10%;
 }
-.content p:nth-child(3){
-    font-size: 12px;
-    width: 40%;
-    margin-bottom: 10px;
+.header-text h1{
+    font-size: 60px;
+   font-weight: 500;
+    margin-top: 20px;
 }
-.content b{
-    color: brown;
+
+/*------------------- about------------------ */
+.container{
+    margin: 50px 75px 50px 75px;
+}   
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
 }
-.content a{
+.col1{
+    flex-basis: 35%;
+}
+.col1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.col2{
+    flex-basis: 60%;
+}
+.col2 h4{
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+.col2 p{
+    font-size: 16px;
+}
+#skill{
+    margin: 20px 0 ;
+    width: 60%;
+    
+    padding: 15px 20px;
+    
+}
+#skill h3{
+    font-weight: 300;
+}
+.skillRow h2{
+ font-weight: 200;
+ letter-spacing: 4px;
+ margin-top: 40px;
+ margin-bottom: 4px;
+ font-size: 16px;
+}
+.progress-bar{
+    background: #ccc;
+    width: 80%;
+    height: 10px;
+    border-radius: 5px;
+}
+.progress-bar div{
+    height: 10px;
+    border-radius: 5px;
+    width: 0;
+   
+}
+.progress-bar div span{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: white;
+    float: right;
+    margin-top: -15px;
+    margin-right: -20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.html{
+    background-color: rgb(201, 86, 86);
+    animation: html 1s linear forwards;
+}
+.css{
+    background: rgb(71, 71, 172);
+    animation: css 1s linear forwards;
+}
+.javascript{
+    background: rgb(255, 217, 0);
+    animation: javascript 1s linear forwards;
+}
+/* -----------------------services-------------- */
+#services{
+    padding: 0 25px;
+    margin: 0 40px 20px;
+}
+.services-title{
+    margin-bottom: 30px;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(250px, 1fr));
+    grid-gap: 50px;
+}
+.services-list div{
+    background-color: #fff;
+    box-shadow: 0 0 10px;
+    padding: 40px;
+    border-radius: 20px;
+    font-weight: 300;
+}
+.services-list div h3{
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+/* ---------------------porfolio--------------------- */
+#porfolio{
+    padding: 50px 0;
+}
+#porfolio h3{
+    font-size: 30px;
+}
+.porfolio-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(250px, 1fr));
+    grid-gap: 50px;
+    margin-top: 50px;
+}
+.porfolio-list div{
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    height: 70vh;
+}
+.porfolio-list div img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: .3s;
+    border-radius: 10px;
+
+}
+.porfolio-list div img:hover{
+    transform: scale(1.1);
+}
+/* --------------------contact------------------- */
+#contact{
+    padding: 20px 5%;
+}
+.leftContact{
+    flex-basis: 35%;
+    margin-bottom: 30px;
+}
+.rightContact{
+    flex-basis: 60%;
+}
+.leftContact p{
+    margin-top: 30px;
+}
+.socialIcon{
+    margin-top: 30px;
+}
+.socialIcon a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.rightContact form{
+    width: 100%;
+}
+form input,
+form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background-color: #ccc;
+    padding: 15px;
+    margin: 15px 0;
+    color: #000;
+    font-size: 18px;
+    border-radius: 5px;
+    resize: none;
+}
+form button{
+    padding: 5px 15px;
+    background: transparent;
+    color: burlywood;
     border: 1px solid burlywood;
-    padding: 5px 10px;
-   text-decoration: none;
-   color: burlywood;
-   transition: .5s;
+    position: relative;
 }
-.content a:hover{
-    background: burlywood;
-    color: #ffffff;
-}
-.feature-img{
-    height: 90%;
+form button::after{
+    content: '';
     position: absolute;
-    right: 90px;
-    top: 80px;
+    background: burlywood;
+    width: 0;
+    left: 0;
+    bottom: 0px;
+    height: 100%;
+    transition: .5s;
+    z-index: -9999;
+}
+form button:hover::after{
+    width: 100%;
+}
+form button:hover{
+    color: #fff;
+}
+
+/* --------------------------copyright---------------------- */
+.copyright{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    background-color: burlywood;
+    padding: 15px 0;
+}
+
+
+
+/*--------------Keyframe--------------*/
+
+@keyframes html {
+    100%{
+        width: 75%;
+    }
+}
+@keyframes css {
+    100%{
+        width: 86%;
+    }
+}
+@keyframes javascript {
+    100%{
+        width: 65%;
+    }
+}
+
+
+
+
+/* ------------------------mediaQuery---------------------- */
+
+@media screen and (max-width: 1203px){
+    .col1 img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+@media screen and (max-width: 899px){
+    #header{
+        background-image: url(secondProfile.jpg);
+    }
+    .header-text{
+        margin-top: 200px;
+    }
+    #skill{
+        width: 100%;
+    }
+    
 }
 @media screen and (max-width: 750px) {
     .center-navbar ul{
@@ -152,23 +397,42 @@ body{
         width: 45%;
        
     }
+    .container{
+        padding: 0 20px;
+    }
+    .row{
+        display: block;
+    }
+    .col1 img{
+        width: 250px;
+    }
+    #skill{
+        width: 100%;
+    }
 }
 @media screen and (max-width: 690px){
-    body{
-        background-image: url(secondProfile.jpg);
-    }
-    .content p:nth-child(3){
-        font-size: 11px;
-        width: 55%;
-       color: #000000;
-    }
-    .content h3{
-        font-size: 25px;
-        font-weight: 300;
+    .header-text h1{
+        font-size: 40px;
     }
 }
-@media screen and (max-width: 410px){
-    body{
+@media screen and (max-width: 590px){
+    #header{
         background-image: url(thirdProfile.jpg);
+    }
+}
+@media screen and (max-width: 457px){
+    .header-text h1{
+        font-size: 30px;
+    }
+    .header-text p{
+        font-size: 19px;
+    }
+}
+@media screen and (max-width: 395px){
+    #services{
+        margin: 0;
+    }
+    .container{
+        margin: 40px 0;
     }
 }
