@@ -339,7 +339,7 @@ form button:hover{
 }
 @media screen and (max-width: 899px){
     #header{
-        background-image: url(secondProfile.jpg);
+        background-image: url(../secondProfile.jpg);
     }
     .header-text{
         margin-top: 200px;
@@ -417,7 +417,7 @@ form button:hover{
 }
 @media screen and (max-width: 590px){
     #header{
-        background-image: url(thirdProfile.jpg);
+        background-image: url(../thirdProfile.jpg);
     }
 }
 @media screen and (max-width: 457px){
