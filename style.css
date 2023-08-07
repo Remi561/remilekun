@@ -10,7 +10,7 @@ html{
     transition: .5s;
 }
 #header{
-    background: url(profile.jpg);
+    background: url(../profile.jpg);
     background-attachment: fixed;
     width: 100%;
     height: 100vh;
